@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dasar</title>
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <!-- notif selamat datang -->
+    <script>
+        alert("selamat datang di javascript!")
+    </script>
+
+    <!-- percabangan -->
+    <script>
+        // percabangan
+        // nilai awal yag bisa diisi(?)
+        let nilai = prompt("masukan nilai anda: ");
+        // bagean percabangan
+        if (nilai >= 90) {
+            alert(" nilai anda: A");
+        } else if (nilai >= 75) {
+            alert(" Nilai anda: B");
+        } else {
+            alert(" awokawokaowk C")
+        }
+
+    </script>
+
+    <script>
+        // perulangan
+        for (let i = 1; i <= 3; i++) { console.log("belajar js di praktikum ke-", + i) }
+    </script>
+
+    <h3>hitug luas segitiga</h3>
+    <input type="number" id="alas" placeholder="masukan alas">
+    <input type="number" id="tinggi" placeholder="masukan tinggi">
+    <button onclick="hitungluas()">Hitung</button>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungluas() {
+            let alas = document.getElementById("alas").value;
+            let tinggi = document.getElementById("tinggi").value;
+            let luas = 0.5 * alas * tinggi;
+            document.getElementById("hasil").innerText = "luas segitiga : " + luas
+        }
+    </script>
+    <!-- rubah background -->
+    <div class="">
+        <button onclick="color()">klik unutk merubah warna</button>
+    </div>
+
+    <hr>
+    <!-- bilangan ganjil dari 1 sampai 20. -->
+    <h2>Bilangan Ganjil 1 - 20</h2>
+    <button onclick="tampilkanGanjil()">Tampilkan</button>
+    <p id="hasilGanjil"></p>
+    <hr>
+
+</body>
+
+</html>
