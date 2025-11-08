@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praktikum web 7</title>
+</head>
+
+<body>
+    <script>
+        // membuat daftra siswa
+        let siswa = ["adi", "somad", "putri"];
+        // menambah data ke array
+        siswa.push("dewi");
+
+        // menampilkan data
+        console.log(siswa);
+
+        console.log("daftar nama siswa:");
+        siswa.forEach(function (nama) {
+            console.log("-" + nama);
+        })
+    </script>
+
+    <script>
+        function kali(angka, callback) {
+            let hasil = angka * 2;
+            callback(hasil);
+        }
+        kali(3, (hasil) => console.log("hasil kali: ", hasil)); 
+    </script>
+    <div id="data"></div>
+    <script>
+        async function ambildata() {
+            const hasil = await fetch("https://jsonplaceholder.typicode.com/posts");
+            const data = await hasil.json();
+            document.getElementById("data").innerHTML = data.map((d) => `<p>${d.title}</p>`).join("");
+
+            console.log(data);
+        }
+
+        ambildata();
+    </script>
+</body>
+
+</html>
